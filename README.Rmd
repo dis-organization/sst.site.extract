@@ -12,20 +12,15 @@ knitr::opts_chunk$set(
 ```
 # sst.site.extract
 
-The goal of sst.site.extract is to ...
+The goal of sst.site.extract is to expose some of the lurking problems in seemingly simple spatial tasks. 
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+We will: 
 
-```{r cars}
-summary(cars)
-```
+* define a number of coastal sites
+* access time series of SST data
+* find the right pixel for every site (and discover some sites are in the land mask)
+* use nearest-neighbour tools to define proxy-sites, the nearest point in valid data for all sites
+* optimize the SST lookup and define an extraction loop
+* make a mistake after testing the loop with i = 1 and running the entire thing on that first slice
+* prevail
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
